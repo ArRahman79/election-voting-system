@@ -55,6 +55,7 @@ void electionResult()
         printf("BSP won by %d vote to bjp\n",wonByvote);
 	}
 }
+
 void calculatevote(int vote)
 {
 	switch (vote)
@@ -73,6 +74,7 @@ void calculatevote(int vote)
 	    	break;
 	}
 }
+
 void main()
 {
 	int choose;
@@ -83,22 +85,23 @@ void main()
 	printf("**********************************************\n");
 	printf("   3.AAP   | 4.BSP       |\n");
 	printf("**********************************************\n\n");
-do
-{
-	printf("Press 1 to vote BJP\n");
-	printf("Press 2 to vote Congress\n");
-    printf("Press 3 to vote AAP\n");
-    printf("Press 4 to vote BSP\n");
-    printf("Press 5 to show election result\n");
-    printf("Please choose :");
-    scanf("%d",&choose);
-    if (choose==5)
-    {
-    	electionResult();
-	} else
+	do
 	{
-		calculatevote(choose);
-	}
-	printf("\n");
-} while (choose !=5);
+		printf("Press 1 to vote BJP\n");
+		printf("Press 2 to vote Congress\n");
+    		printf("Press 3 to vote AAP\n");
+    		printf("Press 4 to vote BSP\n");
+    		printf("Press 5 to show election result\n");
+    		printf("Please choose :");
+    		scanf("%d",&choose);
+    		if (choose==5)
+    		{
+    			electionResult();
+		}
+		else
+		{
+			calculatevote(choose);
+		}
+		printf("\n");
+	} while (choose !=5);
 }
